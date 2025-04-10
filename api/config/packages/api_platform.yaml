@@ -1,6 +1,12 @@
 api_platform:
     title: Hello API Platform
     version: 1.0.0
+    
+    formats:
+        multipart: [ 'multipart/form-data' ]
+        jsonld: [ 'application/ld+json' ]
+        json: ['application/json']
+    
     # Mercure integration, remove if unwanted
     mercure:
         include_type: true
