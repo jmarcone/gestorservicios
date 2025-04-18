@@ -26,7 +26,10 @@ use Symfony\Component\Serializer\Annotation\Groups;
         new GetCollection(),
         new Post()
     ],
-    inputFormats: ['multipart' => ['application/ld+json']],
+    inputFormats: [
+        'multipart' => ['multipart/form-data'],
+        'jsonld' => ['application/ld+json']
+    ],
     outputFormats: ['jsonld' => ['application/ld+json']],
     normalizationContext: ['groups' => ['casa:read']],
     denormalizationContext: ['groups' => ['casa:write']]
