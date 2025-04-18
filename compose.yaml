@@ -58,14 +58,14 @@ services:
       - frontend
 #      - internal
     
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.gestor-proyectos-pwa.rule=Host(`admin.gestordeprojectos.local`)
-      - traefik.http.routers.gestor-proyectos-pwa.entrypoints=web
-
-      - traefik.http.routers.gestor-proyectos-secure-pwa.tls=true
-      - traefik.http.routers.gestor-proyectos-secure-pwa.entrypoints=websecure
-      - traefik.http.routers.gestor-proyectos-secure-pwa.rule=Host(`admin.gestordeprojectos.local`)
+#    labels:
+#      - traefik.enable=true
+#      - traefik.http.routers.gestor-proyectos-pwa.rule=Host(`admin.gestordeprojectos.local`)
+#      - traefik.http.routers.gestor-proyectos-pwa.entrypoints=web
+#
+#      - traefik.http.routers.gestor-proyectos-secure-pwa.tls=true
+#      - traefik.http.routers.gestor-proyectos-secure-pwa.entrypoints=websecure
+#      - traefik.http.routers.gestor-proyectos-secure-pwa.rule=Host(`admin.gestordeprojectos.local`)
 
   database:
     image: postgres:${POSTGRES_VERSION:-16}-alpine
